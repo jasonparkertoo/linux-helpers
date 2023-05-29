@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for p in `xfconf-query -c xfce4-keyboard-shortcuts -l`; do
+	echo -e "resetting ${p}"
+	xfconf-query -c xfce4-keyboard-shortcuts -p ${p} -s ""
+done
+
