@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# dep ver
 go_test_ver=v1.6.0
 go_mod_tags_ver=v1.16.0
 impl_ver=v1.1.0
@@ -9,7 +8,6 @@ delve_ver=latest
 staticcheck_ver=latest
 go_pls=latest
 
-# deps
 deps=(
   "github.com/cweill/gotests/gotests@${go_test_ver}"
   "github.com/fatih/gomodifytags@${go_mod_tags_ver}"
