@@ -1,14 +1,17 @@
 {
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
   "base_keymap": "JetBrains",
-  "ui_font_family": "Source Sans Pro",
   "ui_font_size": 20,
-  "buffer_font_family": "Source Code Pro",
-  "buffer_font_size": 20,
+  "ui_font_family": "Fira Sans",
+  "buffer_font_size": 19,
+  "buffer_font_family": "Fira Code",
+  "terminal": {
+    "cursor_shape": "bar"
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Light"
   },
   "autosave": {
     "after_delay": {
@@ -17,8 +20,8 @@
   },
   "file_scan_exclusions": [
     "**/.git",
-    "**/.gitignore",
-    "**/.gitattributes",
+    // "**/.gitignore",
+    // "**/.gitattributes",
     "**/.classpath",
     "**/.settings",
     "**/.factorypath",
@@ -47,6 +50,12 @@
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
+    "inline_alternatives": [
+      {
+        "provider": "ollama",
+        "model": "stable-code"
+      }
+    ],
     "version": "2"
   }
 }
