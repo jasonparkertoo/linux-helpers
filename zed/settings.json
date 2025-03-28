@@ -5,13 +5,16 @@
   "ui_font_family": "Fira Sans",
   "buffer_font_size": 19,
   "buffer_font_family": "Fira Code",
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "terminal": {
     "cursor_shape": "bar"
   },
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Light"
+    "dark": "One Dark"
   },
   "autosave": {
     "after_delay": {
@@ -29,6 +32,9 @@
     // "**/target"
   ],
   "languages": {
+    "Plain Text": {
+      "show_whitespaces": "all"
+    },
     "Go": {
       "show_edit_predictions": true
     },
