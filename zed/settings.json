@@ -2,14 +2,15 @@
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "base_keymap": "JetBrains",
   "ui_font_size": 20,
-  "ui_font_family": "Fira Sans",
-  "buffer_font_size": 19,
-  "buffer_font_family": "Fira Code",
+  // "ui_font_family": "Fira Sans",
+  "buffer_font_size": 20,
+  // "buffer_font_family": "Fira Code",
   "edit_predictions": {
     "mode": "subtle"
   },
   "terminal": {
-    "cursor_shape": "bar"
+    "cursor_shape": "bar",
+    "blinking": "on"
   },
   "theme": {
     "mode": "system",
@@ -36,7 +37,9 @@
       "show_whitespaces": "all"
     },
     "Go": {
-      "show_edit_predictions": true
+      "show_edit_predictions": true,
+      "format_on_save": "on",
+      "remove_unused_imports_on_save": true
     },
     "Java": {
       "format_on_save": "on",
