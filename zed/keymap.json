@@ -8,10 +8,10 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-      "alt-left": "pane::ActivatePrevItem",
+      "alt-left": "pane::ActivatePreviousItem",
       "alt-right": "pane::ActivateNextItem",
-      "alt-1": "project_panel::Open"
+      "alt-1": "project_panel::Open",
+      "alt-2": "editor::FoldAll"
     }
   }
 ]
