@@ -2,9 +2,9 @@
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "base_keymap": "JetBrains",
   "ui_font_size": 20,
-  // "ui_font_family": "Fira Sans",
+  // "ui_font_family": "Source Sans 3",
   "buffer_font_size": 20,
-  // "buffer_font_family": "Fira Code",
+  // "buffer_font_family": "Source Code Pro",
   "edit_predictions": {
     "mode": "subtle"
   },
@@ -24,13 +24,13 @@
   },
   "file_scan_exclusions": [
     "**/.git",
-    // "**/.gitignore",
-    // "**/.gitattributes",
+    "**/.gitignore",
+    "**/.gitattributes",
     "**/.classpath",
     "**/.settings",
     "**/.factorypath",
-    "**/.project"
-    // "**/target"
+    "**/.project",
+    "**/target"
   ],
   "languages": {
     "Plain Text": {
@@ -43,12 +43,12 @@
     },
     "Java": {
       "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "google-java-format",
-          "arguments": ["-a", "-"]
-        }
-      }
+      // "formatter": {
+      //   "external": {
+      //     "command": "google-java-format",
+      //     "arguments": ["-a", "-"]
+      //   }
+      // }
     }
   },
   "auto_update_extensions": {
@@ -66,5 +66,22 @@
       }
     ],
     "version": "2"
-  }
+  },
+  "lsp": {
+      "jdtls": {
+        "initialization_options": {
+          "settings": {
+            "java": {
+              "jdt": {
+                "ls": {
+                  "lombokSupport": {
+                    "enabled": true // Set this to true to enable lombok support
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 }
