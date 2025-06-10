@@ -1,10 +1,20 @@
 {
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "icon_theme": "JetBrains New UI Icons (Light)",
   "base_keymap": "JetBrains",
-  "ui_font_size": 20,
-  // "ui_font_family": "Source Sans 3",
-  "buffer_font_size": 20,
-  // "buffer_font_family": "Source Code Pro",
+  "ui_font_size": 23,
+  "ui_font_family": "Source Sans Pro",
+  "buffer_font_size": 21,
+  "buffer_font_family": "Source Code Pro",
   "edit_predictions": {
     "mode": "subtle"
   },
@@ -22,27 +32,27 @@
       "milliseconds": 1000
     }
   },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.gitignore",
-    "**/.gitattributes",
-    "**/.classpath",
-    "**/.settings",
-    "**/.factorypath",
-    "**/.project",
-    "**/target"
-  ],
+  // "file_scan_exclusions": [
+  //   "**/.git",
+  //   "**/.gitignore",
+  //   "**/.gitattributes",
+  //   "**/.classpath",
+  //   "**/.settings",
+  //   "**/.factorypath",
+  //   "**/.project",
+  //   "**/target"
+  // ],
   "languages": {
     "Plain Text": {
       "show_whitespaces": "all"
     },
     "Go": {
-      "show_edit_predictions": true,
-      "format_on_save": "on",
-      "remove_unused_imports_on_save": true
+      "show_edit_predictions": false,
+      "format_on_save": "on"
     },
     "Java": {
       "format_on_save": "on",
+      "formatter": "language_server"
       // "formatter": {
       //   "external": {
       //     "command": "google-java-format",
@@ -54,10 +64,14 @@
   "auto_update_extensions": {
     "java": true
   },
-  "assistant": {
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b"
+    },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "ollama",
+      "model": "llama3.2:latest"
     },
     "inline_alternatives": [
       {
@@ -68,20 +82,35 @@
     "version": "2"
   },
   "lsp": {
-      "jdtls": {
-        "initialization_options": {
-          "settings": {
-            "java": {
-              "jdt": {
-                "ls": {
-                  "lombokSupport": {
-                    "enabled": true // Set this to true to enable lombok support
-                  }
+    "jdtls": {
+      "initialization_options": {
+        "settings": {
+          "java": {
+            "jdt": {
+              "ls": {
+                "lombokSupport": {
+                  "enabled": true // Set this to true to enable lombok support
                 }
               }
+            },
+            "format": {
+              "enabled": true,
+              "settings": {
+                "url": "file:///home/jason/Repos/Default.xml"
+              }
+            },
+            "saveActions": {
+              "organizeImports": false
+            },
+            "autobuild": {
+              "enabled": false
+            },
+            "referencesCodeLens": {
+              "enabled": false
             }
           }
         }
       }
     }
+  }
 }
